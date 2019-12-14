@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS parent_task (
+	Parent_ID INT NOT NULL,
+	Parent_Task VARCHAR(45) NOT NULL,
+	PRIMARY KEY (Parent_ID)
+);
+
+CREATE TABLE IF NOT EXISTS task (
+	Task_ID INT NOT NULL,
+	Parent_ID_FK INT NOT NULL,
+	Task VARCHAR(45) NOT NULL,
+	Start_Date DATETIME NOT NULL,
+	End_Date DATETIME NOT NULL,
+	Priority INT NOT NULL,
+	Task_Status VARCHAR(1),
+	PRIMARY KEY (Task_ID)
+);
+
